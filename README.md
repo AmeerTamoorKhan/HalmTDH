@@ -106,7 +106,7 @@ The application will be available at `http://localhost:5000`
 - **Stubble Analysis**: Measure stubble dimensions
 
 ### **Step 2: Select Crop Type**
-Choose from the supported crop varieties (Spring/Winter × Barley/Wheat/Rye/Triticale)
+Choose from the supported crop varieties (Spring Winter, Spring Barley, Winter Wheat, Winter Rye, Winter Triticale)
 
 ### **Step 3: Upload Image**
 Upload your field image (JPEG, PNG supported)
