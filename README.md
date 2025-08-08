@@ -46,7 +46,7 @@ Experience HalmTDH in action: **[https://halmtdh.atkhan.info/](https://halmtdh.a
 
 ### **1. Clone Repository**
 ```bash
-git clone https://github.com/yourusername/halmtdh.git
+git clone https://github.com/AmeerTamoorKhan/HalmTDH.git
 cd halmtdh
 ```
 
