@@ -1,0 +1,9 @@
+opencv-python
+matplotlib
+
+flask
+flask-cors
+gunicorn
+
+ultralytics
+

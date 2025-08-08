@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HalmTDH - Heads</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌾</text></svg>">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body class="d-flex flex-column" style="height: 100vh;">
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url_for('home') }}">🌾 HalmTDH</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link button-19 navbar-button" href="{{ url_for('home') }}">Home</a></li>
+                <li class="nav-item"><a class="nav-link button-19 navbar-button" href="{{ url_for('sepal') }}">Sepals</a></li>
+                <li class="nav-item"><a class="nav-link button-19 navbar-button" href="{{ url_for('head') }}">Heads</a></li>
+                <li class="nav-item"><a class="nav-link button-19 navbar-button" href="{{ url_for('stubble') }}">Stubbles</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Title -->
+<div class="page-indicator text-center py-3">
+    <h1>Heads</h1>
+</div>
+
+<!-- Main Content -->
+<div class="container-fluid main-content">
+    <div class="row h-100">
+
+        <!-- Crop Type Section -->
+        <div class="col-lg-3 crop-section d-flex flex-column">
+            <div class="crop-container flex-grow-1">
+                <h2>Crop Type</h2>
+                <form>
+                    <div class="radio-group">
+                        <div><input type="radio" id="spring_wheat" name="crop" value="heads/spring_wheat"> <label for="spring_wheat">Spring - Wheat</label></div>
+                        <div><input type="radio" id="spring_barley" name="crop" value="heads/spring_barley"> <label for="spring_barley">Spring - Barley</label></div>
+                        <div><input type="radio" id="winter_wheat" name="crop" value="heads/winter_wheat"> <label for="winter_wheat">Winter - Wheat</label></div>
+                        <div><input type="radio" id="winter_rye" name="crop" value="heads/winter_rye"> <label for="winter_rye">Winter - Rye</label></div>
+                        <div><input type="radio" id="winter_tritcale" name="crop" value="heads/winter_triticale"> <label for="winter_tritcale">Winter - Triticale</label></div>
+                    </div>
+                </form>
+                
+                <div class="download-sample-wrapper text-center mt-auto">
+                    <button id="downloadSampleBtn" class="button-19 download-sample-btn" data-type="head">Try Sample</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Upload Section -->
+        <div class="col-lg-5 d-flex flex-column position-relative image-uploader-section">
+            <!-- Image Uploader Block -->
+            <div class="uploader-section flex-grow-1 d-flex flex-column">
+                <h2 class="text-center">Image Uploader Screen</h2>
+                <div class="position-relative image-placeholder flex-grow-1" id="imagePlaceholder">
+                    <!-- <button id="prevBtn" class="nav-arrow"></button>
+                    <button id="nextBtn" class="nav-arrow"></button> -->
+                    <p style="font-size:14px">Image Preview Area</p>
+                    <canvas id="previewCanvas"></canvas>
+                    <div class="zoom-controls">
+                        <button id="zoomInBtn">+</button>
+                        <button id="zoomOutBtn">-</button>
+                    </div>
+                </div>
+                <input type="file" id="imageInput" class="form-control-file d-none" accept="image/*" multiple>
+                <div class="uploader-controls-wrapper"></div>
+            </div>
+
+            <!-- Side Navigation Buttons Anchored to Section Edges -->
+            <button id="prevBtn" class="nav-arrow"></button>
+            <button id="nextBtn" class="nav-arrow"></button>
+
+
+            <!-- New Functional Buttons -->
+            <!-- <button id="dragBtn" class="nav-arrow" title="Drag Mode">
+                <i class="bi bi-hand-index-thumb" style="font-size: 20px; color: white; padding-top: 10px !important"></i>
+            </button> -->
+
+            <span class="new-badge">New</span>
+            <button id="selectBtn" class="nav-arrow" title="Select Mode">
+                <i class="bi bi-fullscreen" style="font-size: 20px; color: white; padding-top: 10px !important"></i>            
+            </button>
+
+            <!-- Button Container Below Uploader -->
+            <div class="button-control-section mt-2 mb-3">
+                <div class="d-flex justify-content-center align-items-center">
+                    <button id="uploadBtn" class="button-19 mx-3">Upload</button>
+                    <button id="clearBtn" class="button-19 mx-3">Clear</button>
+                    <button id="countBtn" class="button-19 mx-3" disabled>Count</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Results Section -->
+        <div class="col-lg-3 results-section d-flex flex-column">
+            <div class="results-container flex-grow-1">
+                <h2>Results</h2>
+                <div id="resultsTableWrapper" class="results-scroll-wrapper">
+                    <table class="results-table">
+                        <thead id="resultsTableHeader">
+                            <tr><th>Image</th><th>Count</th></tr>
+                        </thead>
+                        <tbody id="resultsTableBody">
+                            <!-- JS Populated -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="download-wrapper text-center mt-auto">
+                    <button id="downloadResultBtn" class="button-19 download-btn">Download</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="mt-auto px-4 py-2 position-relative">
+    <div class="text-center text-white" style="font-weight: bold;">&copy; 2024 HalmTDH</div>
+  
+    <div class="visitor-counter button-53">
+      <i class="bi bi-eye-fill" style="margin-right: 6px; color: black; font-size: 1.1rem;"></i>
+      <span class="count-animate" id="visitorCount" style="font-size: 1.1rem;">{{ count }}</span>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+<script src="https://unpkg.com/@panzoom/panzoom@9.4.1/dist/panzoom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
