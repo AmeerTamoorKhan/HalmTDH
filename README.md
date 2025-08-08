@@ -66,11 +66,11 @@ Create a `weights/` directory and download the pre-trained models:
 - Winter Triticale Sepal → `weights/winter_triticale_sepal.pt`
 
 **Head Models (Object Detection):**
-- [Spring Barley Head](https://drive.google.com/file/d/1OhGDlWq4HJi8P1CnFiMksL2v2LOUHKQN) → `weights/spring_barley_heads.pt`
-- [Spring Wheat Head](https://drive.google.com/file/d/1oAOeVFIGePffaJji6FTrQW39BFQx5R4n) → `weights/spring_wheat_heads.pt`
-- [Winter Wheat Head](https://drive.google.com/file/d/1VBNuLDuM4rbd7-yEAh-9Qvy9GMLI6lOp) → `weights/winter_wheat_heads.pt`
-- [Winter Rye Head](https://drive.google.com/file/d/1AnvlKpwYxYEpqBzFrlIdqvmiHOgrgGow) → `weights/winter_rye_heads.pt`
-- [Winter Triticale Head](https://drive.google.com/file/d/1EclmepPAiS-T2vO9OxHLk7cWs4d8LDry) → `weights/winter_triticale_heads.pt`
+- Spring Barley Head → `weights/spring_barley_heads.pt`
+- Spring Wheat Head → `weights/spring_wheat_heads.pt`
+- Winter Wheat Head → `weights/winter_wheat_heads.pt`
+- Winter Rye Head → `weights/winter_rye_heads.pt`
+- Winter Triticale Head → `weights/winter_triticale_heads.pt`
 
 **Stubble Model:**
 - Stubble Analysis → `weights/stubble.pt`
