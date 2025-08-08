@@ -59,21 +59,21 @@ pip install -r requirements.txt
 Create a `weights/` directory and download the pre-trained models:
 
 **Sepal Models (Instance Segmentation):**
-- Spring Barley Sepal → `weights/spring_barley_sepal.pt`
-- Spring Wheat Sepal → `weights/spring_wheat_sepal.pt`
-- Winter Wheat Sepal → `weights/winter_wheat_sepal.pt`
-- Winter Rye Sepal → `weights/winter_rye_sepal.pt`
-- Winter Triticale Sepal → `weights/winter_triticale_sepal.pt`
+- [Spring Barley Sepal](https://drive.google.com/file/d/1-xSJQkjynP3bWjZI7mj2D3kuRULJVypQ) → `weights/spring_barley_sepal.pt`
+- [Spring Wheat Sepal](https://drive.google.com/file/d/101cdotfjwlUjzT-6e4IQP9jGR-NunMT4) → `weights/spring_wheat_sepal.pt`
+- [Winter Wheat Sepal](https://drive.google.com/file/d/1-lxSWw8jn8Du-FLA0QJZ_2HrNCMgJsEA) → `weights/winter_wheat_sepal.pt`
+- [Winter Rye Sepal](https://drive.google.com/file/d/1-CiHibYRpAq0w8h18dSQHp1YvZKk_JgT) → `weights/winter_rye_sepal.pt`
+- [Winter Triticale Sepal](https://drive.google.com/file/d/1-xpZ7sdaufhq1RL_d42uEI3hdtn59wJt) → `weights/winter_triticale_sepal.pt`
 
 **Head Models (Object Detection):**
-- Spring Barley Head → `weights/spring_barley_heads.pt`
-- Spring Wheat Head → `weights/spring_wheat_heads.pt`
-- Winter Wheat Head → `weights/winter_wheat_heads.pt`
-- Winter Rye Head → `weights/winter_rye_heads.pt`
-- Winter Triticale Head → `weights/winter_triticale_heads.pt`
+- [Spring Barley Head](https://drive.google.com/file/d/1-qqq6N91iI2wqsky6mzSnhzW-qPqLfQW) → `weights/spring_barley_heads.pt`
+- [Spring Wheat Head](https://drive.google.com/file/d/10DVxYM0txNFjgGBMNwMo_PHbCObZstge) → `weights/spring_wheat_heads.pt`
+- [Winter Wheat Head](https://drive.google.com/file/d/11Qy9iWJP-5t_CwCrAk4e0WSlJE7sFdr1) → `weights/winter_wheat_heads.pt`
+- [Winter Rye Head](https://drive.google.com/file/d/10ZkZRNanK2T_PTVTvqVj9IoR7QrlvPuM) → `weights/winter_rye_heads.pt`
+- [Winter Triticale Head](https://drive.google.com/file/d/12cpnj8jjF7pNbjZ9K4VVI38JhA4DgpWe) → `weights/winter_triticale_heads.pt`
 
 **Stubble Model:**
-- Stubble Analysis → `weights/stubble.pt`
+- [Stubble Analysis](https://drive.google.com/file/d/1KFw3jYlqvnDTm5iyM6dcFwSbVNjBHriH) → `weights/stubble.pt`
 
 ### **4. Create Directory Structure**
 ```
@@ -118,7 +118,7 @@ Watch as HalmTDH processes your image patch by patch, providing:
 - Annotated results
 
 ### **Step 5: Download Results**
-Export annotated images and detailed analytics, including:
+Export annotated images and detailed analytics including:
 - Object counts and confidence scores
 - Bounding box coordinates
 - Morphological measurements
@@ -148,7 +148,7 @@ Export annotated images and detailed analytics, including:
 
 ## 📊 **Datasets**
 
-All datasets are available for research purposes:
+Create a folder `static/downloads/' and save the dataset as folders:
 
 ### **Sepal Count Datasets (Instance Segmentation)**
 | Crop | Dataset Link |
@@ -243,7 +243,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 ## 📞 **Support & Contact**
-- **Email**: drop-in@atkhan.info
+
+- **Email**: atk@plen.ku.dk
 
 ---
 
